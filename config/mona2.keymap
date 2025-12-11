@@ -20,6 +20,10 @@
     flavor = "balanced";
 };
 
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 5 500>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -41,6 +45,24 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        exit_AML: exit_AML {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&tog_off MOUSE>;
+            label = "exit_AML";
+        };
+
+        kp_exit_AML: kp_exit_AML {
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
+            label = "KP_exit_AML";
         };
     };
 
@@ -69,6 +91,24 @@
 
             tap-ms = <20>;
         };
+
+        tog_off: toggle_layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
+
+        mt_exit_AML_on_tap: mt_exit_AML_on_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_exit_AML_ON_TAP";
+            bindings = <&kp>, <&kp_exit_AML>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+        };
     };
 
     keymap {
@@ -78,7 +118,7 @@
             bindings = <
 &kp Q             &kp W         &kp E    &kp R      &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A             &kp S         &kp D    &kp F      &kp G                                  &kp F13        &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C    &kp V      &kp B        &kp F14                   &kp F15        &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X         &kp C    &kp V      &kp B        &kp F14                   &kp F15        &kp N        &kp M  &kp COMMA  &kp DOT  &mt_exit_AML_on_tap RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp F16  &kp LANG1  &lt 2 SPACE  &lt_to_layer_0 3 LANG2    &kp BACKSPACE  &lt 1 ENTER                             &kp LEFT_ALT
             >;
 
