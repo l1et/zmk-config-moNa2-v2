@@ -18,6 +18,9 @@ manifest:
     - name: zettaface  # <-- Input Processor Keybind
       url-base: https://github.com/zettaface
 
+    - name: te9no
+      url-base: https://github.com/te9no
+
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -37,7 +40,7 @@ manifest:
       revision: main
 
     - name: zmk-input-processor-keybind
-      remote: zettaface
+      remote: te9no
       revision: main
 
   self:
