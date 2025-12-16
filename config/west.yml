@@ -18,8 +18,11 @@ manifest:
     - name: zettaface  # <-- Input Processor Keybind
       url-base: https://github.com/zettaface
 
-    - name: te9no
-      url-base: https://github.com/te9no
+    # - name: te9no  # <-- Input Processor Keybind
+    #   url-base: https://github.com/te9no
+
+    - name: kot149
+      url-base: https://github.com/kot149
 
   projects:
     - name: zmk
@@ -40,8 +43,12 @@ manifest:
       revision: main
 
     - name: zmk-input-processor-keybind
-      remote: te9no
+      remote: zettaface
       revision: main
+
+    - name: zmk-layout-shift
+      remote: kot149
+      revision: v1
 
   self:
     path: config
