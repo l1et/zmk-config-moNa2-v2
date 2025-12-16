@@ -24,9 +24,6 @@ manifest:
     - name: kot149
       url-base: https://github.com/kot149
 
-    - name: l1et
-      url-base: https://github.com/l1et
-
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -42,8 +39,7 @@ manifest:
     #   revision: main
 
     - name: zmk-rgbled-widget
-      remote: l1et
-      # remote: caksoylar
+      remote: caksoylar
       revision: main
 
     - name: zmk-input-processor-keybind
