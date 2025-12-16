@@ -30,14 +30,12 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
-      # revision: main
+      revision: main
       import: app/west.yml
 
     - name: zmk-pmw3610-driver
       remote: badjeff
-      revision: main
-      # revision: zmk-0.4
+      revision: zmk-0.4
 
     # - name: zmk-driver-paw3222
     #   remote: sekigon-gonnoc
