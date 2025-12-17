@@ -3,9 +3,9 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
-// &zip_temp_layer {
-//     require-prior-idle-ms = <200>;
-// };
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;
+};
 
 &default_transform {
     col-offset = <6>;
@@ -59,9 +59,10 @@
         res-cpi = <600>;
         invert-x; //COROPIT版ではコメントアウトを外す
         invert-y; //COROPIT版ではコメントアウトを外す
-        zephyr,axis-y = <INPUT_REL_X>;
-        zephyr,axis-x = <INPUT_REL_Y>;
+        zephyr,axis-x = <INPUT_REL_X>;
+        zephyr,axis-y = <INPUT_REL_Y>;
         smart-mode;
+        force-awake;
     };
 };
 
