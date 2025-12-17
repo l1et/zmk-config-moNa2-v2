@@ -15,8 +15,8 @@ manifest:
     - name: caksoylar  # <-- RGB LED
       url-base: https://github.com/caksoylar
 
-    - name: zettaface  # <-- Input Processor Keybind
-      url-base: https://github.com/zettaface
+    # - name: zettaface  # <-- Input Processor Keybind
+    #   url-base: https://github.com/zettaface
 
     # - name: te9no  # <-- Input Processor Keybind
     #   url-base: https://github.com/te9no
@@ -42,9 +42,9 @@ manifest:
       remote: caksoylar
       revision: main
 
-    - name: zmk-input-processor-keybind
-      remote: zettaface
-      revision: main
+    # - name: zmk-input-processor-keybind
+    #   remote: zettaface
+    #   revision: main
 
     - name: zmk-layout-shift
       remote: kot149
