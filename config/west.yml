@@ -24,6 +24,9 @@ manifest:
     - name: kot149
       url-base: https://github.com/kot149
 
+    - name: 4mplelab
+      url-base: https://github.com/4mplelab
+
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -53,6 +56,10 @@ manifest:
     - name: zmk-scroll-snap
       remote: kot149
       revision: v1
+
+    - name: zmk-feature-charge-indicator
+      remote: 4mplelab
+      revision: main
 
   self:
     path: config

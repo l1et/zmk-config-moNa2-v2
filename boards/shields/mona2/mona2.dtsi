@@ -114,4 +114,11 @@
         triggers-per-rotation = <10>;
     };
 
+    chg_stat: chg_stat {
+        compatible = "custom,chg-stat";
+        /* Adjust for your board, e.g., P0.17 for XIAO nRF52840 */
+        gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
+        status = "okay";
+    };
+
 };
