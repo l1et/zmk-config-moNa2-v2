@@ -30,7 +30,7 @@ manifest:
   projects:
     - name: l1et
       remote: zmkfirmware
-      revision: v0.3.0-2
+      revision: v0.3.0-1
       import: app/west.yml
 
     - name: zmk-pmw3610-driver
