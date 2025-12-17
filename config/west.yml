@@ -24,10 +24,13 @@ manifest:
     - name: kot149
       url-base: https://github.com/kot149
 
+    - name: l1et
+      url-base: https://github.com/l1et
+
   projects:
-    - name: zmk
+    - name: l1et
       remote: zmkfirmware
-      revision: v0.3.0
+      revision: v0.3.0-1
       import: app/west.yml
 
     - name: zmk-pmw3610-driver
