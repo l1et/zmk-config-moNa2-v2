@@ -9,7 +9,7 @@
 // ZMK Layout Shift module
 #include <layout_shift_kp_override.dtsi>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 30
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 #define MOUSE 5
 #define SCROLL 6
 
@@ -81,7 +81,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-            tap-ms = <100>;
+            tap-ms = <20>;
         };
 
         scroll_right_left: mouse_wheel_right_left {
@@ -89,7 +89,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
 
-            tap-ms = <100>;
+            tap-ms = <20>;
         };
     };
 
