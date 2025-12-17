@@ -28,8 +28,8 @@ manifest:
       url-base: https://github.com/l1et
 
   projects:
-    - name: l1et
-      remote: zmkfirmware
+    - name: zmkfirmware
+      remote: l1et
       revision: v0.3.0-2
       import: app/west.yml
 
