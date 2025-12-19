@@ -49,9 +49,9 @@ manifest:
       remote: zettaface
       revision: main
 
-    # - name: zmk-layout-shift
-    #   remote: kot149
-    #   revision: v1
+    - name: zmk-layout-shift
+      remote: kot149
+      revision: v1
 
     # - name: zmk-scroll-snap
     #   remote: kot149
