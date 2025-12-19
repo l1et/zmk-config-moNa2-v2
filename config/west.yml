@@ -53,9 +53,9 @@ manifest:
       remote: kot149
       revision: v1
 
-    - name: zmk-scroll-snap
-      remote: kot149
-      revision: v1
+    # - name: zmk-scroll-snap
+    #   remote: kot149
+    #   revision: v1
 
     - name: zmk-feature-charge-indicator
       remote: 4mplelab
