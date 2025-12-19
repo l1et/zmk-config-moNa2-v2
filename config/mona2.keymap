@@ -49,10 +49,10 @@
             key-positions = <20 19>;
         };
 
-        grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <11 10>;
-        };
+        // grave {
+        //     bindings = <&kp GRAVE>;
+        //     key-positions = <11 10>;
+        // };
     };
 
     macros {
