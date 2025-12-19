@@ -4,13 +4,13 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &zip_temp_layer {
-    excluded-positions = <
-        18 // J
-        19 // K
-        21 // ;
-        34 // Ctrl
-    >;
     require-prior-idle-ms = <200>;
+    excluded-positions = <
+        17 // J
+        18 // K
+        19 // ;
+        33 // Ctrl
+    >;
 };
 
 &default_transform {
